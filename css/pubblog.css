@@ -1,0 +1,96 @@
+body { margin:0 auto; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: greyscale;
+       font-size:16px; font-weight:400; color:#333; background-color:#fff; }
+
+a { color:#4183c4; text-decoration:none; }
+
+h1, h2, h3 { color:#4183c4; margin-bottom:0; }
+
+header { width:100%; color:#ccc; font-size:18px; }
+header a, header a:focus, #navicon { color:#ccc; text-decoration:none; cursor:pointer; line-height:38px; font-weight:inherit; transition:all 0.4s; }
+header a:hover, #navicon:hover { color:#777; }
+
+#doctitle, #topmenu { display:inline-block; white-space:nowrap; }
+#topmenu { float:right; }
+
+#doctitle h1 { display:inline-block; line-height:38px; margin:0 0 0 6px; font-weight:400; transition:all 0.4s; }
+#doctitle p, #topmenu p, #navicon p { display:inline-block; margin:0; }
+#topmenu ul { list-style:none; padding:0; margin:0; }
+#topmenu li { display:inline-block; margin:0 6px; }
+
+#navicon { position:absolute; top:38px; width:38px; text-align:center; left:0; z-index:300; transition:all 0.4s; }
+
+#toc { position:absolute; left:0; width:200px; overflow-y:auto; text-align:right; transition:all 0.4s; }
+#toc ul { list-style:none; padding:0; margin:0 0 3em 0; }
+#toc li { background-color:rgba(255,255,255,0.7); }
+
+#toc a { display:block; text-decoration:none; color:#777; padding:5px 12px; line-height:1.4;}
+#toc a:hover, #toc a:focus { color:#fff; background-color:#555; }
+
+#title { background-size:cover; min-height:10em; margin-top:5px; margin-bottom:3em; padding:6em 0 6em 0; }
+.title { font-size:80px; text-align:center; padding:0 2em; color:white; background-color:rgba(0,0,0,0.3); font-weight:100; }
+.subtitle { font-size: 40px; }
+
+#main { margin-left:200px; transition:margin 0.4s; }
+
+#content {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:18px;
+  line-height:1.6;
+  max-width:700px;
+  margin:1em auto;
+  padding:0 20px;
+  min-height:800px
+}
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5 {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#content pre { font-size:16px; background-color:#fafafa; padding:1em 4px;}
+
+#content blockquote {
+  font-size:x-large;
+  margin:0;
+  padding:0.5em 4em;
+  text-align:center;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5 { margin-bottom:0.2em; margin-top:1em; }
+
+#credit { display:inline-block; width:160px; position:fixed; bottom:0; left:0; color:#999; font-size:12px; margin-top:60px; }
+#credit p { margin:0; padding:4px; }
+#credit a { white-space:nowrap; }
+#credit:hover { color:#000; background-color:#eee; }
+
+/* force toc and navbutton into title bar on all but the widest displays */
+@media only screen and (max-width:1800px) {
+#toc { left:-1000px; text-align:left; }
+#toc ul { margin-top:20px; }
+#toc a { color:#777; }
+#navicon { top:3px; }
+#main { margin-left:0; }
+#doctitle h1 { margin:0 0 0 38px; }
+#navicon:hover #toc, #toc a:focus { left:0; }
+#credit { position:static; display:block; margin:0 auto; left:auto; bottom:auto; width:auto; max-width:740px; text-align:center; }
+}
+
+@media only screen and (max-width:400px) {
+#doctitle p { display:none; }
+}
+
+@media only screen and (max-width:650px) {
+.title { padding:0 10px; font-size:60px; }
+}
+
+@media print {
+html, body { font-size:10px; color:#000; }
+a { color:#000; text-decoration:underline; }
+#toc, #credit, .pub-button { display:none; }
+#main { margin:0; }
+#content { max-width:95%; margin:0; padding:0; }
+}

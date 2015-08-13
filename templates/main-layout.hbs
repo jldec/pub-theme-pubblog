@@ -1,0 +1,16 @@
+<header>
+<div id="doctitle">{{{docTitle}}}</div>
+<div id="topmenu">{{{topMenu}}}</div>
+</header>
+
+<div id="navicon" onclick="">{{{navIcon}}}
+<nav id="toc">
+<ul>
+{{#eachPage~}}
+<li>{{{pageLink}}}</li>
+{{/eachPage~}}
+</ul>
+</nav>
+</div>
+
+{{{renderPage}}}

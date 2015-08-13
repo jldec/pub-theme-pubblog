@@ -1,0 +1,19 @@
+{
+  "name": "pub-theme-pubblog",
+  "version": "1.0.0",
+  "description": "pub-server blogging theme",
+  "main": "pub-config.js",
+  "dependencies": {
+  },
+  "keywords": [
+    "publish",
+    "markdown",
+    "pubblog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jldec/pub-theme-pubblog.git"
+  },
+  "author": "jurgen leschner",
+  "license": "MIT"
+}

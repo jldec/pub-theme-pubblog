@@ -1,0 +1,22 @@
+<div id="title" {{{title-style}}}>
+<div class="title">{{title}}</div>
+<div class="subtitle">{{subtitle}}</div>
+</div>
+
+<div id="main" onclick="">
+<div id="content">
+
+<div {{{style}}}>
+{{{html}}}
+</div>
+
+{{#each _fragments~}}
+<div {{{style}}}>
+{{{html}}}
+</div>
+{{/each}}
+
+<div id="credit">{{{credit}}}</div>
+
+</div>
+</div>
