@@ -12,6 +12,7 @@ env
 *.sock
 support
 test
+screenshots
 examples
 example
 dist
