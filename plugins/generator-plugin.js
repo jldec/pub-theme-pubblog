@@ -10,17 +10,17 @@ module.exports = function(generator) {
       opts.defaultImage ||
       '/images/default.jpg';
 
-    return bgImageStyle(frame, this, src);
+    return bgImageStyle(src);
   });
 
   hb.registerHelper('style', function(frame) {
-    return bgImageStyle(frame, this, this['background-image']);
+    return bgImageStyle(this['background-image']);
   });
 
-  function bgImageStyle(frame, fragment, src) {
+  function bgImageStyle(src) {
     if (src) {
       return 'style=\'background-image:url("' +
-        hb.imageSrc(frame, fragment, src) + '");\'';
+        hb.fixPath(src) + '");\'';
     }
   }
 
