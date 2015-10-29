@@ -1,6 +1,8 @@
 {{#eachPost~}}
 <div class='postentry'>
-<h2><span class="permalink">{{{permaLink}}}</span>{{{pageLink}}}</h2>
+{{{permaLink}}}
+<h2>{{{pageLink}}}</h2>
+<div class="date">{{date}}</div>
 {{{fragmentHtml [#excerpt]}}}
 </div>
 {{/eachPost}}

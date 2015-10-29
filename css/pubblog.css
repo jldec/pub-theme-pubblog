@@ -1,5 +1,6 @@
 body { margin:0 auto; font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: greyscale;
+      -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
        font-size:16px; font-weight:400; color:#333; background-color:#fff; }
 
 a { color:#4183c4; text-decoration:none; }
@@ -72,8 +73,8 @@ header a:hover, #navicon:hover { color:#777; }
 }
 
 a.permalink {
-  display:inline-block; font:normal normal normal 14px FontAwesome;
-  line-height:28px; height:28px; text-align:center; width:18px; color:#bbb; float:right;
+  float:right; display:inline-block; font:normal normal normal 14px FontAwesome;
+  line-height:28px; height:28px; text-align:center; width:28px; color:#bbb;
   color: #ddd;
 }
 
@@ -83,21 +84,19 @@ a.permalink:hover {
 }
 
 .postentry {
-  padding-bottom: 1em;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 3em;
+  border-top: 1px solid #eee;
 }
 
 h2 a:hover { text-decoration:underline; }
 
 .postentry > div {
-  font-size: 16px;
   font-style: italic;
 }
 
-#credit { position:static; display:block; margin:0 auto; text-align:center; color:#999; font-size:12px; }
+#credit { position:static; display:block; margin:6em auto 2em; text-align:center; font-size:12px; color:#555; background-color:#eee; }
 #credit p { margin:0; padding:4px; }
 #credit a { white-space:nowrap; }
-#credit:hover { color:#000; background-color:#eee; }
 
 @media only screen and (max-width:650px) {
 .title { padding:0 10px; font-size:60px; }
@@ -105,7 +104,6 @@ h2 a:hover { text-decoration:underline; }
 }
 
 @media only screen and (max-width:400px) {
-body { font-size:18px; }
 #doctitle p { display:none; }
 }
 
