@@ -1,11 +1,20 @@
 # pub-theme-pubblog
 
-Blog theme for [pub-server](https://github.com/jldec/pub-server)
+Very simple blog theme for [pub-server](https://github.com/jldec/pub-server)
 
-![](/screenshots/screen1.png)
+- home page with excerpts from all posts
+- nav menu
+- single post view
 
-This theme was created in a day and is still under construction.
+# sample post header
 
-The dropdown menu is usable for a smallish (<20) number of posts. It provides no paginated or hierarchical navigation.
+```md
+---- /feature-wishlist-for-github-pages ----
+name: Feature Wishlist for GitHub Pages
+image: /images/cover-me.jpg
+date: 2015-09-30
 
-The only view currently implemented is the single-post reader view.
+# markdown starts here
+```
+
+This theme is used on http://blog.pubblz.com [(source)](https://github.com/jldec/pubblog-src).

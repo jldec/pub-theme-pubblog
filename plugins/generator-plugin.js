@@ -2,6 +2,7 @@ module.exports = function(generator) {
 
   var u = generator.util;
   var opts = generator.opts;
+  var log = opts.log;
   var hb = generator.handlebars;
 
   // you know, the big bleeding photo at the top...
@@ -27,7 +28,7 @@ module.exports = function(generator) {
   hb.registerHelper('navIcon', function(frame) {
 
     return hb.defaultFragmentHtml('/#navicon',
-      '_!arrow-circle-o-down fw lg_',
+      '_!arrow-circle-o-down fw 2x_',
       '<span class="icon">=</span>',
       frame);
   });
@@ -50,5 +51,24 @@ module.exports = function(generator) {
       url ? '<ul><li><a href="' + url + '">github</a></li></ul>' : '',
       frame);
   });
+
+  hb.registerHelper('permaLink', function(frame) {
+    return '<a class="permalink" href="' +
+      hb.relPath() + this._href +
+      '" title="Link to this post.">&#xf0c1;</a>'
+  });
+
+  // block helper over posts
+  hb.registerHelper('eachPost', function(frame) {
+    return u.map(posts(), frame.fn).join('');
+  })
+
+  function posts() {
+    return u(generator.contentPages).reject(function(page) {
+      return page.multipage;
+    }).sortBy(function(page) {
+      return page.date || ' '; // sort non-dated entries after
+    }).reverse().value();
+  }
 
 }

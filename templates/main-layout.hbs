@@ -6,11 +6,25 @@
 <div id="navicon" onclick="">{{{navIcon}}}
 <nav id="toc">
 <ul>
-{{#eachPage~}}
+<li>{{{linkTo '/' 'Home'}}}</li>
+{{#eachPost~}}
 <li>{{{pageLink}}}</li>
-{{/eachPage~}}
+{{/eachPost~}}
 </ul>
 </nav>
 </div>
 
+<div id="title" {{{title-style}}}>
+  <div class="title">{{title}}</div>
+  <div class="subtitle">{{subtitle}}</div>
+</div>
+
+<div id="main" onclick="">
+<div id="content">
+
 {{{renderPage}}}
+
+<div id="credit">{{{credit}}}</div>
+
+</div>
+</div>
