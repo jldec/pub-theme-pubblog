@@ -71,8 +71,22 @@ header a:hover, #navicon:hover { color:#777; }
   border:none;
 }
 
+#content ul {
+  margin-top: 0;
+}
+
+#content code {
+  background-color: #f0f0f0;
+  padding: 0 3px;
+}
+
+#content img {
+  max-width:100%;
+  border: 1px solid #777;
+}
+
 a.permalink {
-  float:right; display:inline-block; font:normal normal normal 14px FontAwesome;
+  float:right; font:normal normal normal 14px FontAwesome;
   line-height:28px; height:28px; text-align:center; width:28px; color:#bbb;
   color: #ddd;
 }
@@ -107,9 +121,10 @@ h2 a:hover { text-decoration:underline; }
 }
 
 @media print {
-html, body { font-size:10px; color:#000; }
+html, body { font-size:11px; color:#000; }
 a { color:#000; text-decoration:underline; }
-#toc, #credit, .pub-button { display:none; }
+header, #navicon, #toc, #credit, .pub-button, .permalink { display:none; }
+#title { margin:0; padding:0; }
 #main { margin:0; }
 #content { max-width:95%; margin:0; padding:0; }
 }

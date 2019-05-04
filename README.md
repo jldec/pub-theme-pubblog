@@ -17,4 +17,4 @@ date: 2015-09-30
 # markdown starts here
 ```
 
-This theme is used on http://blog.pubblz.com [(source)](https://github.com/jldec/pubblog-src).
+This theme is used on https://blog.pubblz.com [(source)](https://github.com/jldec/pubblog-src).

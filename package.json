@@ -1,10 +1,15 @@
 {
   "name": "pub-theme-pubblog",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "pub-server blogging theme",
   "main": "pub-config.js",
-  "dependencies": {
-  },
+  "dependencies": {},
+  "files": [
+    "css/",
+    "plugins/",
+    "templates/",
+    "pub-config.js"
+  ],
   "keywords": [
     "publish",
     "markdown",
