@@ -1,6 +1,6 @@
 {
   "name": "pub-theme-pubblog",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "pub-server blogging theme",
   "main": "pub-config.js",
   "dependencies": {},
@@ -20,6 +20,6 @@
     "type": "git",
     "url": "git://github.com/jldec/pub-theme-pubblog.git"
   },
-  "author": "jurgen leschner",
+  "author": "Jürgen Leschner",
   "license": "MIT"
 }
