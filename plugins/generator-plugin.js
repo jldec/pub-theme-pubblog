@@ -53,10 +53,9 @@ module.exports = function(generator) {
   });
 
   hb.registerHelper('permaLink', function(frame) {
-    return '<a class="permalink" href="' +
-      hb.relPath() + this._href + '" title="Link to this post.">' +
-      opts.appUrl + this._href
-      +'</a>'
+    return this.permalink_full ?
+    '<a class="permalink_full" href="' + hb.relPath() + this._href + '" title="Link to this post.">' + opts.appUrl + this._href + '</a>' :
+    '<a class="permalink" href="' + hb.relPath() + this._href + '" title="Link to this post.">&#xf0c1;</a>';
   });
 
   // block helper over posts
