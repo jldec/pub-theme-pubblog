@@ -86,14 +86,7 @@ header a:hover, #navicon:hover { color:#777; }
 }
 
 a.permalink {
-  float:right; font:normal normal normal 14px FontAwesome;
-  line-height:28px; height:28px; text-align:center; width:28px; color:#bbb;
-  color: #ddd;
-}
-
-a.permalink:hover {
-  color: #4183c4;
-  text-decoration:none;
+  float:right;
 }
 
 .postentry {
@@ -122,9 +115,10 @@ h2 a:hover { text-decoration:underline; }
 
 @media print {
 html, body { font-size:11px; }
-a { text-decoration:underline; }
-header, #title, #navicon, #toc, #credit, .pub-button, .permalink, .date { display:none; }
+a { text-decoration:underline; color:#0366d6 }
+header, #title, #navicon, #toc, #credit, .pub-button { display:none; }
 #main { margin:0; }
 #content { max-width:80%; margin:0 0 0 8em; padding:0; }
 h1, h2 { color:#000; }
+h3, h4 { color:#0366d6 }
 }
