@@ -2,12 +2,16 @@
 
 Very simple blog theme for [pub-server](https://github.com/jldec/pub-server)
 
-- home page with excerpts from all posts
-- nav menu
-- single post view
+## home page
+![Home page screenshot](screenshots/list.png)
 
-# sample post header
+## nav menu
+![Menu screenshot](screenshots/menu.png)
 
+## post
+![Post screenshot](screenshots/screen1.png)
+
+## Sample post markdown header
 ```md
 ---- /feature-wishlist-for-github-pages ----
 name: Feature Wishlist for GitHub Pages
@@ -17,4 +21,4 @@ date: 2015-09-30
 # markdown starts here
 ```
 
-This theme is used on https://blog.pubblz.com [(source)](https://github.com/jldec/pubblog-src).
+This theme is used on https://firstinthecloud.com (content at https://github.com/jldec/firstinthecloud.com).
