@@ -71,4 +71,12 @@ module.exports = function(generator) {
     }).reverse().value();
   }
 
+  // marked custom renderer for images - treats title text starting with . as class string
+  function renderImage(href, title, text) {
+    if (!/^\./.test(title)) return false; // fallback unless title starts with .
+    return '<img src="' + hb.fixPath(href) + '" class="' + title.slice(1) + '" alt="' + u.escape(text || href) + '">'
+  }
+
+  generator.marked.use( { renderer: { image:renderImage } } );
+
 }

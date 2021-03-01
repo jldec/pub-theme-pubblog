@@ -85,6 +85,10 @@ header a:hover, #navicon:hover { color:#777; }
   border: 1px solid #777;
 }
 
+#content img.no-border {
+  border: none;
+}
+
 a.permalink {
   float:right; font:normal normal normal 14px FontAwesome;
   line-height:28px; height:28px; text-align:center; width:28px; color:#bbb;
