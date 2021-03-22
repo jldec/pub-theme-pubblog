@@ -71,12 +71,18 @@ module.exports = function(generator) {
     }).reverse().value();
   }
 
-  // marked custom renderer for images - treats title text starting with . as class string
-  function renderImage(href, title, text) {
-    if (!/^\./.test(title)) return false; // fallback unless title starts with .
-    return '<img src="' + hb.fixPath(href) + '" class="' + title.slice(1) + '" alt="' + u.escape(text || href) + '">'
-  }
+  // block helper applies headers for values with pattern meta-<name>: <value>
+  hb.registerHelper('eachMetaSemi', function(frame) {
+    var metakeys = u.filter(u.keys(this), function(key) { return /^meta-/.test(key); });
+    return u.map(u.pick(this, metakeys), function(val, key) {
+      return frame.fn({ name:key.slice(5).replace(/;/g,':'), content:val }); }).join('');
+  });
 
-  generator.marked.use( { renderer: { image:renderImage } } );
+  // block helper applies headers for values with pattern metap-<property>: <value>
+  hb.registerHelper('eachMetaProp', function(frame) {
+    var metakeys = u.filter(u.keys(this), function(key) { return /^metap-/.test(key); });
+    return u.map(u.pick(this, metakeys), function(val, key) {
+      return frame.fn({ property:key.slice(6).replace(/;/g,':'), content:val }); }).join('');
+  });
 
 }
