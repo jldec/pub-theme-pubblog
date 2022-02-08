@@ -1,6 +1,6 @@
 {
   "name": "pub-theme-pubblog",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "pub-server blogging theme",
   "main": "pub-config.js",
   "dependencies": {},

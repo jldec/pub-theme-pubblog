@@ -1,5 +1,4 @@
 body { margin:0 auto; font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-      -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -moz-text-size-adjust:100%; text-size-adjust:100%;
        font-size:16px; font-weight:400; color:#333; background-color:#fff; }
 
 a { color:#4183c4; text-decoration:none; }
@@ -54,6 +53,13 @@ header a:hover, #navicon:hover { color:#777; }
   font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#content div > pre {
+  padding: 1em;
+  overflow: auto;
+  font-size: 85%;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
 /* #content pre { background-color:#fafafa; padding:1em 4px;} */
 
 #content blockquote {
@@ -75,8 +81,8 @@ header a:hover, #navicon:hover { color:#777; }
   margin-top: 0;
 }
 
-#content code {
-  background-color: #f0f0f0;
+#content p code {
+  background-color: #f6f8fa;
   padding: 0 3px;
 }
 
