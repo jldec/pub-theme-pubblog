@@ -20,5 +20,3 @@ date: 2015-09-30
 
 # markdown starts here
 ```
-
-This theme is used on https://firstinthecloud.com (content at https://github.com/jldec/firstinthecloud.com).
